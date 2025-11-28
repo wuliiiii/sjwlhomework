@@ -1,0 +1,127 @@
+2025-11-29 00:35:43,171 - __main__ - INFO - Args in experiment:
+2025-11-29 00:35:43,172 - __main__ - INFO - Namespace(is_training=1, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=False, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2024, seed=2024, log_path='./log/ResNetClassifier_seed_2024_train_epochs_10.log', logger=<Logger __main__ (INFO)>)
+2025-11-29 00:35:43,394 - Exp_ResNetClassifier_2700349947808 - INFO - Exp_ResNetClassifier init
+2025-11-29 00:35:43,395 - __main__ - INFO - >>>>>>>start training : ResNetClassifier_2024>>>>>>>>>>>>>>>>>>>>>>>>>>
+2025-11-29 00:35:43,400 - Exp_ResNetClassifier_2700349947808 - INFO - Dataset loaded successfully! Total samples: 512
+2025-11-29 00:35:43,406 - Exp_ResNetClassifier_2700349947808 - INFO - ============================================================
+2025-11-29 00:35:43,407 - Exp_ResNetClassifier_2700349947808 - INFO - Full dataset class distribution:
+2025-11-29 00:35:43,407 - Exp_ResNetClassifier_2700349947808 - INFO -   Non-ICAS: 348 samples (68.0%)
+2025-11-29 00:35:43,407 - Exp_ResNetClassifier_2700349947808 - INFO -   ICAS: 164 samples (32.0%)
+2025-11-29 00:35:43,407 - Exp_ResNetClassifier_2700349947808 - INFO - Train set (358 samples, 69.9% of total):
+2025-11-29 00:35:43,408 - Exp_ResNetClassifier_2700349947808 - INFO -   Non-ICAS: 243 samples (67.9%)
+2025-11-29 00:35:43,408 - Exp_ResNetClassifier_2700349947808 - INFO -   ICAS: 115 samples (32.1%)
+2025-11-29 00:35:43,408 - Exp_ResNetClassifier_2700349947808 - INFO - ============================================================
+2025-11-29 00:35:43,414 - Exp_ResNetClassifier_2700349947808 - INFO - Dataset loaded successfully! Total samples: 512
+2025-11-29 00:35:43,418 - Exp_ResNetClassifier_2700349947808 - INFO - ============================================================
+2025-11-29 00:35:43,423 - Exp_ResNetClassifier_2700349947808 - INFO - Full dataset class distribution:
+2025-11-29 00:35:43,423 - Exp_ResNetClassifier_2700349947808 - INFO -   Non-ICAS: 348 samples (68.0%)
+2025-11-29 00:35:43,423 - Exp_ResNetClassifier_2700349947808 - INFO -   ICAS: 164 samples (32.0%)
+2025-11-29 00:35:43,424 - Exp_ResNetClassifier_2700349947808 - INFO - Val set (77 samples, 15.0% of total):
+2025-11-29 00:35:43,424 - Exp_ResNetClassifier_2700349947808 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-11-29 00:35:43,424 - Exp_ResNetClassifier_2700349947808 - INFO -   ICAS: 25 samples (32.5%)
+2025-11-29 00:35:43,424 - Exp_ResNetClassifier_2700349947808 - INFO - ============================================================
+2025-11-29 00:35:43,430 - Exp_ResNetClassifier_2700349947808 - INFO - Dataset loaded successfully! Total samples: 512
+2025-11-29 00:35:43,434 - Exp_ResNetClassifier_2700349947808 - INFO - ============================================================
+2025-11-29 00:35:43,435 - Exp_ResNetClassifier_2700349947808 - INFO - Full dataset class distribution:
+2025-11-29 00:35:43,435 - Exp_ResNetClassifier_2700349947808 - INFO -   Non-ICAS: 348 samples (68.0%)
+2025-11-29 00:35:43,435 - Exp_ResNetClassifier_2700349947808 - INFO -   ICAS: 164 samples (32.0%)
+2025-11-29 00:35:43,435 - Exp_ResNetClassifier_2700349947808 - INFO - Test set (77 samples, 15.0% of total):
+2025-11-29 00:35:43,435 - Exp_ResNetClassifier_2700349947808 - INFO -   Non-ICAS: 53 samples (68.8%)
+2025-11-29 00:35:43,435 - Exp_ResNetClassifier_2700349947808 - INFO -   ICAS: 24 samples (31.2%)
+2025-11-29 00:35:43,436 - Exp_ResNetClassifier_2700349947808 - INFO - ============================================================
+2025-11-29 00:35:43,437 - Exp_ResNetClassifier_2700349947808 - INFO - 训练初始化完成 | 正则化配置：标签平滑(0.1)、权重衰减(1e-4)、梯度裁剪(1.0)、早停(patience=10)
+2025-11-29 00:35:43,437 - Exp_ResNetClassifier_2700349947808 - INFO - 训练轮数：10 | 设备：cpu
+2025-11-29 00:39:07,279 - __main__ - INFO - Args in experiment:
+2025-11-29 00:39:07,279 - __main__ - INFO - Namespace(is_training=1, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=False, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2024, seed=2024, log_path='./log/ResNetClassifier_seed_2024_train_epochs_10.log', logger=<Logger __main__ (INFO)>)
+2025-11-29 00:39:07,495 - Exp_ResNetClassifier_2560562773968 - INFO - Exp_ResNetClassifier init
+2025-11-29 00:39:07,496 - __main__ - INFO - >>>>>>>start training : ResNetClassifier_2024>>>>>>>>>>>>>>>>>>>>>>>>>>
+2025-11-29 00:39:07,501 - Exp_ResNetClassifier_2560562773968 - INFO - Dataset loaded successfully! Total samples: 511
+2025-11-29 00:39:07,506 - Exp_ResNetClassifier_2560562773968 - INFO - ============================================================
+2025-11-29 00:39:07,506 - Exp_ResNetClassifier_2560562773968 - INFO - Full dataset class distribution:
+2025-11-29 00:39:07,506 - Exp_ResNetClassifier_2560562773968 - INFO -   Non-ICAS: 347 samples (67.9%)
+2025-11-29 00:39:07,506 - Exp_ResNetClassifier_2560562773968 - INFO -   ICAS: 164 samples (32.1%)
+2025-11-29 00:39:07,506 - Exp_ResNetClassifier_2560562773968 - INFO - Train set (357 samples, 69.9% of total):
+2025-11-29 00:39:07,507 - Exp_ResNetClassifier_2560562773968 - INFO -   Non-ICAS: 242 samples (67.8%)
+2025-11-29 00:39:07,508 - Exp_ResNetClassifier_2560562773968 - INFO -   ICAS: 115 samples (32.2%)
+2025-11-29 00:39:07,508 - Exp_ResNetClassifier_2560562773968 - INFO - ============================================================
+2025-11-29 00:39:07,514 - Exp_ResNetClassifier_2560562773968 - INFO - Dataset loaded successfully! Total samples: 511
+2025-11-29 00:39:07,517 - Exp_ResNetClassifier_2560562773968 - INFO - ============================================================
+2025-11-29 00:39:07,517 - Exp_ResNetClassifier_2560562773968 - INFO - Full dataset class distribution:
+2025-11-29 00:39:07,517 - Exp_ResNetClassifier_2560562773968 - INFO -   Non-ICAS: 347 samples (67.9%)
+2025-11-29 00:39:07,518 - Exp_ResNetClassifier_2560562773968 - INFO -   ICAS: 164 samples (32.1%)
+2025-11-29 00:39:07,518 - Exp_ResNetClassifier_2560562773968 - INFO - Val set (77 samples, 15.1% of total):
+2025-11-29 00:39:07,518 - Exp_ResNetClassifier_2560562773968 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-11-29 00:39:07,518 - Exp_ResNetClassifier_2560562773968 - INFO -   ICAS: 25 samples (32.5%)
+2025-11-29 00:39:07,518 - Exp_ResNetClassifier_2560562773968 - INFO - ============================================================
+2025-11-29 00:39:07,523 - Exp_ResNetClassifier_2560562773968 - INFO - Dataset loaded successfully! Total samples: 511
+2025-11-29 00:39:07,526 - Exp_ResNetClassifier_2560562773968 - INFO - ============================================================
+2025-11-29 00:39:07,527 - Exp_ResNetClassifier_2560562773968 - INFO - Full dataset class distribution:
+2025-11-29 00:39:07,527 - Exp_ResNetClassifier_2560562773968 - INFO -   Non-ICAS: 347 samples (67.9%)
+2025-11-29 00:39:07,527 - Exp_ResNetClassifier_2560562773968 - INFO -   ICAS: 164 samples (32.1%)
+2025-11-29 00:39:07,527 - Exp_ResNetClassifier_2560562773968 - INFO - Test set (77 samples, 15.1% of total):
+2025-11-29 00:39:07,527 - Exp_ResNetClassifier_2560562773968 - INFO -   Non-ICAS: 53 samples (68.8%)
+2025-11-29 00:39:07,527 - Exp_ResNetClassifier_2560562773968 - INFO -   ICAS: 24 samples (31.2%)
+2025-11-29 00:39:07,527 - Exp_ResNetClassifier_2560562773968 - INFO - ============================================================
+2025-11-29 00:39:07,528 - Exp_ResNetClassifier_2560562773968 - INFO - 训练初始化完成 | 正则化配置：标签平滑(0.1)、权重衰减(1e-4)、梯度裁剪(1.0)、早停(patience=10)
+2025-11-29 00:39:07,529 - Exp_ResNetClassifier_2560562773968 - INFO - 训练轮数：10 | 设备：cpu
+2025-11-29 00:41:06,190 - __main__ - INFO - Args in experiment:
+2025-11-29 00:41:06,190 - __main__ - INFO - Namespace(is_training=1, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=False, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2024, seed=2024, log_path='./log/ResNetClassifier_seed_2024_train_epochs_10.log', logger=<Logger __main__ (INFO)>)
+2025-11-29 00:41:06,444 - Exp_ResNetClassifier_2056891482064 - INFO - Exp_ResNetClassifier init
+2025-11-29 00:41:06,445 - __main__ - INFO - >>>>>>>start training : ResNetClassifier_2024>>>>>>>>>>>>>>>>>>>>>>>>>>
+2025-11-29 00:41:06,450 - Exp_ResNetClassifier_2056891482064 - INFO - Dataset loaded successfully! Total samples: 510
+2025-11-29 00:41:06,455 - Exp_ResNetClassifier_2056891482064 - INFO - ============================================================
+2025-11-29 00:41:06,455 - Exp_ResNetClassifier_2056891482064 - INFO - Full dataset class distribution:
+2025-11-29 00:41:06,455 - Exp_ResNetClassifier_2056891482064 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-11-29 00:41:06,456 - Exp_ResNetClassifier_2056891482064 - INFO -   ICAS: 163 samples (32.0%)
+2025-11-29 00:41:06,456 - Exp_ResNetClassifier_2056891482064 - INFO - Train set (357 samples, 70.0% of total):
+2025-11-29 00:41:06,456 - Exp_ResNetClassifier_2056891482064 - INFO -   Non-ICAS: 243 samples (68.1%)
+2025-11-29 00:41:06,456 - Exp_ResNetClassifier_2056891482064 - INFO -   ICAS: 114 samples (31.9%)
+2025-11-29 00:41:06,456 - Exp_ResNetClassifier_2056891482064 - INFO - ============================================================
+2025-11-29 00:41:06,462 - Exp_ResNetClassifier_2056891482064 - INFO - Dataset loaded successfully! Total samples: 510
+2025-11-29 00:41:06,465 - Exp_ResNetClassifier_2056891482064 - INFO - ============================================================
+2025-11-29 00:41:06,465 - Exp_ResNetClassifier_2056891482064 - INFO - Full dataset class distribution:
+2025-11-29 00:41:06,466 - Exp_ResNetClassifier_2056891482064 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-11-29 00:41:06,466 - Exp_ResNetClassifier_2056891482064 - INFO -   ICAS: 163 samples (32.0%)
+2025-11-29 00:41:06,466 - Exp_ResNetClassifier_2056891482064 - INFO - Val set (76 samples, 14.9% of total):
+2025-11-29 00:41:06,468 - Exp_ResNetClassifier_2056891482064 - INFO -   Non-ICAS: 52 samples (68.4%)
+2025-11-29 00:41:06,468 - Exp_ResNetClassifier_2056891482064 - INFO -   ICAS: 24 samples (31.6%)
+2025-11-29 00:41:06,468 - Exp_ResNetClassifier_2056891482064 - INFO - ============================================================
+2025-11-29 00:41:06,473 - Exp_ResNetClassifier_2056891482064 - INFO - Dataset loaded successfully! Total samples: 510
+2025-11-29 00:41:06,477 - Exp_ResNetClassifier_2056891482064 - INFO - ============================================================
+2025-11-29 00:41:06,478 - Exp_ResNetClassifier_2056891482064 - INFO - Full dataset class distribution:
+2025-11-29 00:41:06,478 - Exp_ResNetClassifier_2056891482064 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-11-29 00:41:06,478 - Exp_ResNetClassifier_2056891482064 - INFO -   ICAS: 163 samples (32.0%)
+2025-11-29 00:41:06,480 - Exp_ResNetClassifier_2056891482064 - INFO - Test set (77 samples, 15.1% of total):
+2025-11-29 00:41:06,480 - Exp_ResNetClassifier_2056891482064 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-11-29 00:41:06,481 - Exp_ResNetClassifier_2056891482064 - INFO -   ICAS: 25 samples (32.5%)
+2025-11-29 00:41:06,481 - Exp_ResNetClassifier_2056891482064 - INFO - ============================================================
+2025-11-29 00:41:06,482 - Exp_ResNetClassifier_2056891482064 - INFO - 训练初始化完成 | 正则化配置：标签平滑(0.1)、权重衰减(1e-4)、梯度裁剪(1.0)、早停(patience=10)
+2025-11-29 00:41:06,482 - Exp_ResNetClassifier_2056891482064 - INFO - 训练轮数：10 | 设备：cpu
+2025-11-29 00:41:20,811 - Exp_ResNetClassifier_2056891482064 - INFO - Epoch [1/10] | Train Loss: 0.5983, Train Acc: 65.83% | Val Loss: 0.5405, Val Acc: 68.42% | Patience Counter: 0/10 | Current LR: 0.001000
+2025-11-29 00:41:34,914 - Exp_ResNetClassifier_2056891482064 - INFO - Epoch [2/10] | Train Loss: 0.5163, Train Acc: 68.35% | Val Loss: 0.6437, Val Acc: 68.42% | Patience Counter: 1/10 | Current LR: 0.001000
+2025-11-29 00:41:49,005 - Exp_ResNetClassifier_2056891482064 - INFO - Epoch [3/10] | Train Loss: 0.4921, Train Acc: 68.63% | Val Loss: 0.5845, Val Acc: 63.16% | Patience Counter: 2/10 | Current LR: 0.001000
+2025-11-29 00:42:03,269 - Exp_ResNetClassifier_2056891482064 - INFO - Epoch [4/10] | Train Loss: 0.4585, Train Acc: 76.75% | Val Loss: 0.7455, Val Acc: 59.21% | Patience Counter: 3/10 | Current LR: 0.001000
+2025-11-29 00:42:17,362 - Exp_ResNetClassifier_2056891482064 - INFO - Epoch [5/10] | Train Loss: 0.4281, Train Acc: 80.11% | Val Loss: 0.8132, Val Acc: 64.47% | Patience Counter: 4/10 | Current LR: 0.001000
+2025-11-29 00:42:31,384 - Exp_ResNetClassifier_2056891482064 - INFO - Epoch [6/10] | Train Loss: 0.3752, Train Acc: 84.03% | Val Loss: 1.0583, Val Acc: 61.84% | Patience Counter: 5/10 | Current LR: 0.001000
+2025-11-29 00:42:45,455 - Exp_ResNetClassifier_2056891482064 - INFO - Epoch [7/10] | Train Loss: 0.3779, Train Acc: 86.27% | Val Loss: 0.8655, Val Acc: 57.89% | Patience Counter: 6/10 | Current LR: 0.001000
+2025-11-29 00:42:59,508 - Exp_ResNetClassifier_2056891482064 - INFO - Epoch [8/10] | Train Loss: 0.3097, Train Acc: 88.80% | Val Loss: 0.9534, Val Acc: 60.53% | Patience Counter: 7/10 | Current LR: 0.001000
+2025-11-29 00:43:13,516 - Exp_ResNetClassifier_2056891482064 - INFO - Epoch [9/10] | Train Loss: 0.3156, Train Acc: 88.52% | Val Loss: 0.9227, Val Acc: 60.53% | Patience Counter: 8/10 | Current LR: 0.001000
+2025-11-29 00:43:27,530 - Exp_ResNetClassifier_2056891482064 - INFO - Epoch [10/10] | Train Loss: 0.2963, Train Acc: 90.20% | Val Loss: 1.1646, Val Acc: 53.95% | Patience Counter: 9/10 | Current LR: 0.001000
+2025-11-29 00:43:27,531 - Exp_ResNetClassifier_2056891482064 - INFO - 训练完成 | 最终最佳验证准确率：60.53%
+2025-11-29 00:43:28,246 - Exp_ResNetClassifier_2056891482064 - INFO - 训练图已成功保存至: C:\study\code\pycharm\project\homework\network_homework2\output\pic\history
+2025-11-29 00:43:28,246 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2024<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2025-11-29 00:43:28,252 - Exp_ResNetClassifier_2056891482064 - INFO - Dataset loaded successfully! Total samples: 510
+2025-11-29 00:43:28,256 - Exp_ResNetClassifier_2056891482064 - INFO - ============================================================
+2025-11-29 00:43:28,256 - Exp_ResNetClassifier_2056891482064 - INFO - Full dataset class distribution:
+2025-11-29 00:43:28,256 - Exp_ResNetClassifier_2056891482064 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-11-29 00:43:28,257 - Exp_ResNetClassifier_2056891482064 - INFO -   ICAS: 163 samples (32.0%)
+2025-11-29 00:43:28,257 - Exp_ResNetClassifier_2056891482064 - INFO - Test set (77 samples, 15.1% of total):
+2025-11-29 00:43:28,257 - Exp_ResNetClassifier_2056891482064 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-11-29 00:43:28,257 - Exp_ResNetClassifier_2056891482064 - INFO -   ICAS: 25 samples (32.5%)
+2025-11-29 00:43:28,257 - Exp_ResNetClassifier_2056891482064 - INFO - ============================================================
+2025-11-29 00:43:28,257 - Exp_ResNetClassifier_2056891482064 - INFO - loading model
+2025-11-29 00:43:30,624 - Exp_ResNetClassifier_2056891482064 - INFO - 混淆矩阵图已成功保存至: C:\study\code\pycharm\project\homework\network_homework2\output\pic\confusion_matrix
+2025-11-29 00:43:31,099 - Exp_ResNetClassifier_2056891482064 - INFO - ROC曲线已保存至: C:\study\code\pycharm\project\homework\network_homework2\output\pic\roc_curve.png
+2025-11-29 00:43:31,100 - Exp_ResNetClassifier_2056891482064 - INFO - ROC曲线AUC值: 0.5515 (正类: Non-ICAS)
+2025-11-29 00:43:31,100 - Exp_ResNetClassifier_2056891482064 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.625, 'recall': 0.2, 'f1': 0.30303030303030304, 'auc': 0.5515384615384615, 'confusion_matrix': array([[49,  3],
+       [20,  5]])}

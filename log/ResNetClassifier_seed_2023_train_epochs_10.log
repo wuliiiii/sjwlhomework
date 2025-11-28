@@ -57,4 +57,36 @@
 2025-11-28 12:00:59,729 - Exp_ResNetClassifier_2164428878848 - INFO - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½Ñ³É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: D:\code\pycharm_project\network_homework2\output\pic\confusion_matrix
 2025-11-28 12:01:00,020 - Exp_ResNetClassifier_2164428878848 - INFO - ROCï¿½ï¿½ï¿½ï¿½ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½ï¿½: D:\code\pycharm_project\network_homework2\output\pic\roc_curve.png
 2025-11-28 12:01:00,021 - Exp_ResNetClassifier_2164428878848 - INFO - ROCï¿½ï¿½ï¿½ï¿½AUCÖµ: 0.5154 (ï¿½ï¿½ï¿½ï¿½: Non-ICAS)
-2025-11-28 12:01:00,021 - Exp_ResNetClassifier_2164428878848 - INFO - {'accuracy': 0.6493506493506493, 'precision': 0.25, 'recall': 0.04, 'f1': 0.06896551724137931, 'auc': 0.5153846153846154, 'confusion_matrix': array([[49,  3],
+2025-11-28 12:01:00,021 - Exp_ResNetClassifier_2164428878848 - INFO - {'accuracy': 0.6493506493506493, 'precision': 0.25, 'recall': 0.04, 'f1': 0.06896551724137931, 'auc': 0.5153846153846154, 'confusion_matrix': array([[49,  3],2025-11-29 00:32:21,428 - __main__ - INFO - Args in experiment:
+2025-11-29 00:32:21,429 - __main__ - INFO - Namespace(is_training=1, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=False, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, seed=2023, log_path='./log/ResNetClassifier_seed_2023_train_epochs_10.log', logger=<Logger __main__ (INFO)>)
+2025-11-29 00:32:31,129 - Exp_ResNetClassifier_2209040913152 - INFO - Exp_ResNetClassifier init
+2025-11-29 00:32:31,130 - __main__ - INFO - >>>>>>>start training : ResNetClassifier_2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+2025-11-29 00:32:31,138 - Exp_ResNetClassifier_2209040913152 - INFO - Dataset loaded successfully! Total samples: 512
+2025-11-29 00:32:31,144 - Exp_ResNetClassifier_2209040913152 - INFO - ============================================================
+2025-11-29 00:32:31,144 - Exp_ResNetClassifier_2209040913152 - INFO - Full dataset class distribution:
+2025-11-29 00:32:31,144 - Exp_ResNetClassifier_2209040913152 - INFO -   Non-ICAS: 348 samples (68.0%)
+2025-11-29 00:32:31,144 - Exp_ResNetClassifier_2209040913152 - INFO -   ICAS: 164 samples (32.0%)
+2025-11-29 00:32:31,144 - Exp_ResNetClassifier_2209040913152 - INFO - Train set (358 samples, 69.9% of total):
+2025-11-29 00:32:31,145 - Exp_ResNetClassifier_2209040913152 - INFO -   Non-ICAS: 243 samples (67.9%)
+2025-11-29 00:32:31,145 - Exp_ResNetClassifier_2209040913152 - INFO -   ICAS: 115 samples (32.1%)
+2025-11-29 00:32:31,145 - Exp_ResNetClassifier_2209040913152 - INFO - ============================================================
+2025-11-29 00:32:31,151 - Exp_ResNetClassifier_2209040913152 - INFO - Dataset loaded successfully! Total samples: 512
+2025-11-29 00:32:31,154 - Exp_ResNetClassifier_2209040913152 - INFO - ============================================================
+2025-11-29 00:32:31,154 - Exp_ResNetClassifier_2209040913152 - INFO - Full dataset class distribution:
+2025-11-29 00:32:31,154 - Exp_ResNetClassifier_2209040913152 - INFO -   Non-ICAS: 348 samples (68.0%)
+2025-11-29 00:32:31,155 - Exp_ResNetClassifier_2209040913152 - INFO -   ICAS: 164 samples (32.0%)
+2025-11-29 00:32:31,155 - Exp_ResNetClassifier_2209040913152 - INFO - Val set (77 samples, 15.0% of total):
+2025-11-29 00:32:31,155 - Exp_ResNetClassifier_2209040913152 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-11-29 00:32:31,155 - Exp_ResNetClassifier_2209040913152 - INFO -   ICAS: 25 samples (32.5%)
+2025-11-29 00:32:31,155 - Exp_ResNetClassifier_2209040913152 - INFO - ============================================================
+2025-11-29 00:32:31,165 - Exp_ResNetClassifier_2209040913152 - INFO - Dataset loaded successfully! Total samples: 512
+2025-11-29 00:32:31,170 - Exp_ResNetClassifier_2209040913152 - INFO - ============================================================
+2025-11-29 00:32:31,170 - Exp_ResNetClassifier_2209040913152 - INFO - Full dataset class distribution:
+2025-11-29 00:32:31,170 - Exp_ResNetClassifier_2209040913152 - INFO -   Non-ICAS: 348 samples (68.0%)
+2025-11-29 00:32:31,171 - Exp_ResNetClassifier_2209040913152 - INFO -   ICAS: 164 samples (32.0%)
+2025-11-29 00:32:31,171 - Exp_ResNetClassifier_2209040913152 - INFO - Test set (77 samples, 15.0% of total):
+2025-11-29 00:32:31,171 - Exp_ResNetClassifier_2209040913152 - INFO -   Non-ICAS: 53 samples (68.8%)
+2025-11-29 00:32:31,171 - Exp_ResNetClassifier_2209040913152 - INFO -   ICAS: 24 samples (31.2%)
+2025-11-29 00:32:31,171 - Exp_ResNetClassifier_2209040913152 - INFO - ============================================================
+2025-11-29 00:32:31,173 - Exp_ResNetClassifier_2209040913152 - INFO - ÑµÁ·³õÊ¼»¯Íê³É | ÕýÔò»¯ÅäÖÃ£º±êÇ©Æ½»¬(0.1)¡¢È¨ÖØË¥¼õ(1e-4)¡¢ÌÝ¶È²Ã¼ô(1.0)¡¢ÔçÍ£(patience=10)
+2025-11-29 00:32:31,173 - Exp_ResNetClassifier_2209040913152 - INFO - ÑµÁ·ÂÖÊý£º10 | Éè±¸£ºcpu
