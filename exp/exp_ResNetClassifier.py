@@ -4,6 +4,8 @@ import torch.nn as nn
 from data_provider.data_factory import data_provider
 from util.tools import EarlyStopping, adjust_learning_rate
 from util.instructor_solution_guide import get_data_transforms_solution
+from util.gradcam_pytorch import visualize_gradcam,analyze_attention_patterns,compare_correct_vs_wrong_predictions
+from util.lime_pytorch import explain_with_lime
 from torch import optim
 import torch
 import os
@@ -14,6 +16,7 @@ import logging
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix,roc_curve, auc
 import seaborn as sns
+from torchvision import transforms, datasets, models
 
 # Sample Visualization Functions
 def plot_training_history_solution(history,logger=None):
@@ -152,8 +155,8 @@ class Exp_ResNetClassifier(Exp_Basic):
 
         return logger
 
-    def _get_data(self, flag):
-        data_set, data_loader = data_provider(self.args, flag,self.logger)
+    def _get_data(self, flag,use_lime=False):
+        data_set, data_loader = data_provider(self.args, flag,self.logger,use_lime=use_lime)
         return data_set, data_loader
 
     def _select_optimizer(self):
@@ -308,12 +311,46 @@ class Exp_ResNetClassifier(Exp_Basic):
 
     def test(self, setting, test=0):
         test_data, test_loader = self._get_data(flag='test')
+        class_names = ["ICAS", "Non-ICAS"]
+
         if test:
             self.logger.info('loading model')
             self.model.load_state_dict(torch.load(f'{self.args.checkpoints}/best_model.pth'))
 
+        # 展示训练
         metrics = self.evaluate_model_solution(self.model,test_loader,self.device)
         self.logger.info(metrics)
+
+        # Step2: 生成Grad-CAM可视化
+        visualize_gradcam(self.model.model.backbone, test_loader, class_names,device=self.device,logger=self.logger)
+
+        # step3:分析注意力机制
+        analyze_attention_patterns(self.model.model.backbone, test_loader, class_names,device=self.device,logger=self.logger)
+
+        # Step4: 比较正确和错误预测
+        compare_correct_vs_wrong_predictions(self.model.model.backbone, test_loader, class_names,device=self.device,logger=self.logger)
+
+        lime_test_data, lime_test_loader = self._get_data(flag='test',use_lime=True)
+
+        # 使用Lime
+        # 用于LIME的变换（不包含归一化）
+        lime_transform = transforms.Compose([
+            transforms.Resize((224, 224)),
+            transforms.ToTensor()
+        ])
+
+        # 用于模型预测的变换（包含归一化）
+        model_transform = transforms.Compose([
+            transforms.Resize((224, 224)),
+            transforms.ToTensor(),
+            transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                 std=[0.229, 0.224, 0.225])
+        ])
+
+        # Step2: 使用LIME生成解释
+        samples, explanations = explain_with_lime(self.model.model.backbone, lime_test_loader, class_names, model_transform,logger=self.logger)
+
+
 
     # Sample Evaluation Function Implementation
     def evaluate_model_solution(self,model, test_loader, device):

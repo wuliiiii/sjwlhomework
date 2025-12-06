@@ -36,7 +36,7 @@ class ThermalDataset(Dataset):
     def __len__(self):
         return len(self.samples)
 
-def data_provider(args, flag,logger):
+def data_provider(args, flag,logger,use_lime=False):
     """
     数据集加载与划分函数：70%训练集、15%研究集、15%测试集（分层划分）
     Args:
@@ -55,7 +55,7 @@ def data_provider(args, flag,logger):
         logger.info(f"Error: Dataset path {data_path} does not exist!")
         return False
 
-    # 定义图像变换（与原代码一致）
+        # 定义图像变换（与原代码一致）
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.ToTensor()
@@ -64,6 +64,7 @@ def data_provider(args, flag,logger):
     # 获取数据变换：训练集用增强，研究/测试集用预处理
     # train_transform, val_transform = get_data_transforms_solution()
     # transform = train_transform if flag == 'train' else val_transform
+
 
 
     # 加载完整数据集
@@ -135,7 +136,7 @@ def data_provider(args, flag,logger):
     shuffle = True if flag == 'train' else False
     data_loader = DataLoader(
         subset_dataset,
-        batch_size=4,
+        batch_size=1,
         shuffle=shuffle,
     )
 

@@ -85,6 +85,10 @@ python main.py
 
 # 使用GPU
 python main.py --use_gpu
+
+# 进行测试
+python main.py --use_gpu --is_training 0
+
 ```
 
 

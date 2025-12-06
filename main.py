@@ -9,9 +9,9 @@ import numpy as np
 import logging
 import os
 import sklearn
+import warnings
 
-
-
+warnings.filterwarnings('ignore')
 
 parser = argparse.ArgumentParser(description='classifer')
 
