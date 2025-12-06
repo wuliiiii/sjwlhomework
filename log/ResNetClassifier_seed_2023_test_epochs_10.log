@@ -1,467 +1,59 @@
-2025-12-06 10:51:48,481 - __main__ - INFO - Args in experiment:
-2025-12-06 10:51:48,486 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 10:51:48,779 - Exp_ResNetClassifier_2401980997472 - INFO - Exp_ResNetClassifier init
-2025-12-06 10:51:48,779 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 10:51:48,779 - Exp_ResNetClassifier_2401980997472 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 10:51:48,784 - Exp_ResNetClassifier_2401980997472 - INFO - ============================================================
-2025-12-06 10:51:48,784 - Exp_ResNetClassifier_2401980997472 - INFO - Full dataset class distribution:
-2025-12-06 10:51:48,784 - Exp_ResNetClassifier_2401980997472 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 10:51:48,784 - Exp_ResNetClassifier_2401980997472 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 10:51:48,784 - Exp_ResNetClassifier_2401980997472 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 10:51:48,784 - Exp_ResNetClassifier_2401980997472 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 10:51:48,784 - Exp_ResNetClassifier_2401980997472 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 10:51:48,784 - Exp_ResNetClassifier_2401980997472 - INFO - ============================================================
-2025-12-06 10:51:48,784 - Exp_ResNetClassifier_2401980997472 - INFO - loading model
-2025-12-06 10:51:51,998 - Exp_ResNetClassifier_2401980997472 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 10:51:52,298 - Exp_ResNetClassifier_2401980997472 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 10:51:52,298 - Exp_ResNetClassifier_2401980997472 - INFO - ROCÇúÏßAUCÖµ: 0.4646 (ÕýÀà: Non-ICAS)
-2025-12-06 10:51:52,298 - Exp_ResNetClassifier_2401980997472 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.46461538461538465, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 10:52:33,751 - __main__ - INFO - Args in experiment:
-2025-12-06 10:52:33,752 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 10:52:34,041 - Exp_ResNetClassifier_2040626203328 - INFO - Exp_ResNetClassifier init
-2025-12-06 10:52:34,041 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 10:52:34,043 - Exp_ResNetClassifier_2040626203328 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 10:52:34,045 - Exp_ResNetClassifier_2040626203328 - INFO - ============================================================
-2025-12-06 10:52:34,046 - Exp_ResNetClassifier_2040626203328 - INFO - Full dataset class distribution:
-2025-12-06 10:52:34,046 - Exp_ResNetClassifier_2040626203328 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 10:52:34,046 - Exp_ResNetClassifier_2040626203328 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 10:52:34,046 - Exp_ResNetClassifier_2040626203328 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 10:52:34,046 - Exp_ResNetClassifier_2040626203328 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 10:52:34,046 - Exp_ResNetClassifier_2040626203328 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 10:52:34,046 - Exp_ResNetClassifier_2040626203328 - INFO - ============================================================
-2025-12-06 10:52:34,047 - Exp_ResNetClassifier_2040626203328 - INFO - loading model
-2025-12-06 10:52:37,454 - Exp_ResNetClassifier_2040626203328 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 10:52:37,751 - Exp_ResNetClassifier_2040626203328 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 10:52:37,751 - Exp_ResNetClassifier_2040626203328 - INFO - ROCÇúÏßAUCÖµ: 0.4646 (ÕýÀà: Non-ICAS)
-2025-12-06 10:52:37,751 - Exp_ResNetClassifier_2040626203328 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.46461538461538465, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 10:55:22,749 - __main__ - INFO - Args in experiment:
-2025-12-06 10:55:22,749 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 10:55:22,967 - Exp_ResNetClassifier_3099064060560 - INFO - Exp_ResNetClassifier init
-2025-12-06 10:55:22,967 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 10:55:22,969 - Exp_ResNetClassifier_3099064060560 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 10:55:22,972 - Exp_ResNetClassifier_3099064060560 - INFO - ============================================================
-2025-12-06 10:55:22,972 - Exp_ResNetClassifier_3099064060560 - INFO - Full dataset class distribution:
-2025-12-06 10:55:22,972 - Exp_ResNetClassifier_3099064060560 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 10:55:22,972 - Exp_ResNetClassifier_3099064060560 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 10:55:22,972 - Exp_ResNetClassifier_3099064060560 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 10:55:22,972 - Exp_ResNetClassifier_3099064060560 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 10:55:22,973 - Exp_ResNetClassifier_3099064060560 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 10:55:22,973 - Exp_ResNetClassifier_3099064060560 - INFO - ============================================================
-2025-12-06 10:55:22,973 - Exp_ResNetClassifier_3099064060560 - INFO - loading model
-2025-12-06 10:55:25,121 - Exp_ResNetClassifier_3099064060560 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 10:55:25,414 - Exp_ResNetClassifier_3099064060560 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 10:55:25,414 - Exp_ResNetClassifier_3099064060560 - INFO - ROCÇúÏßAUCÖµ: 0.4646 (ÕýÀà: Non-ICAS)
-2025-12-06 10:55:25,414 - Exp_ResNetClassifier_3099064060560 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.46461538461538465, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 10:57:43,777 - __main__ - INFO - Args in experiment:
-2025-12-06 10:57:43,777 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 10:57:43,991 - Exp_ResNetClassifier_2468836386960 - INFO - Exp_ResNetClassifier init
-2025-12-06 10:57:43,991 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 10:57:43,993 - Exp_ResNetClassifier_2468836386960 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 10:57:43,997 - Exp_ResNetClassifier_2468836386960 - INFO - ============================================================
-2025-12-06 10:57:43,997 - Exp_ResNetClassifier_2468836386960 - INFO - Full dataset class distribution:
-2025-12-06 10:57:43,997 - Exp_ResNetClassifier_2468836386960 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 10:57:43,997 - Exp_ResNetClassifier_2468836386960 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 10:57:43,997 - Exp_ResNetClassifier_2468836386960 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 10:57:43,997 - Exp_ResNetClassifier_2468836386960 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 10:57:43,997 - Exp_ResNetClassifier_2468836386960 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 10:57:43,997 - Exp_ResNetClassifier_2468836386960 - INFO - ============================================================
-2025-12-06 10:57:43,997 - Exp_ResNetClassifier_2468836386960 - INFO - loading model
-2025-12-06 10:57:46,247 - Exp_ResNetClassifier_2468836386960 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 10:57:46,541 - Exp_ResNetClassifier_2468836386960 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 10:57:46,541 - Exp_ResNetClassifier_2468836386960 - INFO - ROCÇúÏßAUCÖµ: 0.4646 (ÕýÀà: Non-ICAS)
-2025-12-06 10:57:46,541 - Exp_ResNetClassifier_2468836386960 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.46461538461538465, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 10:58:52,559 - __main__ - INFO - Args in experiment:
-2025-12-06 10:58:52,559 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 10:58:52,761 - Exp_ResNetClassifier_2098633072432 - INFO - Exp_ResNetClassifier init
-2025-12-06 10:58:52,761 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 10:58:52,763 - Exp_ResNetClassifier_2098633072432 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 10:58:52,766 - Exp_ResNetClassifier_2098633072432 - INFO - ============================================================
-2025-12-06 10:58:52,766 - Exp_ResNetClassifier_2098633072432 - INFO - Full dataset class distribution:
-2025-12-06 10:58:52,768 - Exp_ResNetClassifier_2098633072432 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 10:58:52,768 - Exp_ResNetClassifier_2098633072432 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 10:58:52,768 - Exp_ResNetClassifier_2098633072432 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 10:58:52,768 - Exp_ResNetClassifier_2098633072432 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 10:58:52,768 - Exp_ResNetClassifier_2098633072432 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 10:58:52,768 - Exp_ResNetClassifier_2098633072432 - INFO - ============================================================
-2025-12-06 10:58:52,768 - Exp_ResNetClassifier_2098633072432 - INFO - loading model
-2025-12-06 10:58:54,845 - Exp_ResNetClassifier_2098633072432 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 10:58:55,146 - Exp_ResNetClassifier_2098633072432 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 10:58:55,146 - Exp_ResNetClassifier_2098633072432 - INFO - ROCÇúÏßAUCÖµ: 0.4646 (ÕýÀà: Non-ICAS)
-2025-12-06 10:58:55,146 - Exp_ResNetClassifier_2098633072432 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.46461538461538465, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:00:37,232 - __main__ - INFO - Args in experiment:
-2025-12-06 11:00:37,232 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:00:37,438 - Exp_ResNetClassifier_2473832600368 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:00:37,438 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:00:37,443 - Exp_ResNetClassifier_2473832600368 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:00:37,443 - Exp_ResNetClassifier_2473832600368 - INFO - ============================================================
-2025-12-06 11:00:37,443 - Exp_ResNetClassifier_2473832600368 - INFO - Full dataset class distribution:
-2025-12-06 11:00:37,443 - Exp_ResNetClassifier_2473832600368 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:00:37,443 - Exp_ResNetClassifier_2473832600368 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:00:37,443 - Exp_ResNetClassifier_2473832600368 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:00:37,443 - Exp_ResNetClassifier_2473832600368 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:00:37,443 - Exp_ResNetClassifier_2473832600368 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:00:37,443 - Exp_ResNetClassifier_2473832600368 - INFO - ============================================================
-2025-12-06 11:00:37,443 - Exp_ResNetClassifier_2473832600368 - INFO - loading model
-2025-12-06 11:00:39,887 - Exp_ResNetClassifier_2473832600368 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:00:40,180 - Exp_ResNetClassifier_2473832600368 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:00:40,180 - Exp_ResNetClassifier_2473832600368 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:00:40,186 - Exp_ResNetClassifier_2473832600368 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:01:04,769 - __main__ - INFO - Args in experiment:
-2025-12-06 11:01:04,769 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:01:04,974 - Exp_ResNetClassifier_2853622491232 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:01:04,974 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:01:04,976 - Exp_ResNetClassifier_2853622491232 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:01:04,979 - Exp_ResNetClassifier_2853622491232 - INFO - ============================================================
-2025-12-06 11:01:04,979 - Exp_ResNetClassifier_2853622491232 - INFO - Full dataset class distribution:
-2025-12-06 11:01:04,980 - Exp_ResNetClassifier_2853622491232 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:01:04,980 - Exp_ResNetClassifier_2853622491232 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:01:04,980 - Exp_ResNetClassifier_2853622491232 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:01:04,980 - Exp_ResNetClassifier_2853622491232 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:01:04,980 - Exp_ResNetClassifier_2853622491232 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:01:04,980 - Exp_ResNetClassifier_2853622491232 - INFO - ============================================================
-2025-12-06 11:01:04,980 - Exp_ResNetClassifier_2853622491232 - INFO - loading model
-2025-12-06 11:01:07,294 - Exp_ResNetClassifier_2853622491232 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:01:07,612 - Exp_ResNetClassifier_2853622491232 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:01:07,612 - Exp_ResNetClassifier_2853622491232 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:01:07,612 - Exp_ResNetClassifier_2853622491232 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:02:18,419 - __main__ - INFO - Args in experiment:
-2025-12-06 11:02:18,419 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:02:18,631 - Exp_ResNetClassifier_2641856882640 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:02:18,631 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:02:18,634 - Exp_ResNetClassifier_2641856882640 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:02:18,638 - Exp_ResNetClassifier_2641856882640 - INFO - ============================================================
-2025-12-06 11:02:18,638 - Exp_ResNetClassifier_2641856882640 - INFO - Full dataset class distribution:
-2025-12-06 11:02:18,638 - Exp_ResNetClassifier_2641856882640 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:02:18,638 - Exp_ResNetClassifier_2641856882640 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:02:18,638 - Exp_ResNetClassifier_2641856882640 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:02:18,638 - Exp_ResNetClassifier_2641856882640 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:02:18,638 - Exp_ResNetClassifier_2641856882640 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:02:18,639 - Exp_ResNetClassifier_2641856882640 - INFO - ============================================================
-2025-12-06 11:02:18,639 - Exp_ResNetClassifier_2641856882640 - INFO - loading model
-2025-12-06 11:02:20,921 - Exp_ResNetClassifier_2641856882640 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:02:21,210 - Exp_ResNetClassifier_2641856882640 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:02:21,215 - Exp_ResNetClassifier_2641856882640 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:02:21,215 - Exp_ResNetClassifier_2641856882640 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:04:28,754 - __main__ - INFO - Args in experiment:
-2025-12-06 11:04:28,754 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:04:28,968 - Exp_ResNetClassifier_1703806412896 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:04:28,968 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:04:28,970 - Exp_ResNetClassifier_1703806412896 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:04:28,971 - Exp_ResNetClassifier_1703806412896 - INFO - ============================================================
-2025-12-06 11:04:28,971 - Exp_ResNetClassifier_1703806412896 - INFO - Full dataset class distribution:
-2025-12-06 11:04:28,971 - Exp_ResNetClassifier_1703806412896 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:04:28,971 - Exp_ResNetClassifier_1703806412896 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:04:28,971 - Exp_ResNetClassifier_1703806412896 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:04:28,971 - Exp_ResNetClassifier_1703806412896 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:04:28,971 - Exp_ResNetClassifier_1703806412896 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:04:28,971 - Exp_ResNetClassifier_1703806412896 - INFO - ============================================================
-2025-12-06 11:04:28,971 - Exp_ResNetClassifier_1703806412896 - INFO - loading model
-2025-12-06 11:04:31,239 - Exp_ResNetClassifier_1703806412896 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:04:31,530 - Exp_ResNetClassifier_1703806412896 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:04:31,530 - Exp_ResNetClassifier_1703806412896 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:04:31,530 - Exp_ResNetClassifier_1703806412896 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:05:07,846 - __main__ - INFO - Args in experiment:
-2025-12-06 11:05:07,846 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:05:08,071 - Exp_ResNetClassifier_1850676979808 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:05:08,071 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:05:08,073 - Exp_ResNetClassifier_1850676979808 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:05:08,073 - Exp_ResNetClassifier_1850676979808 - INFO - ============================================================
-2025-12-06 11:05:08,078 - Exp_ResNetClassifier_1850676979808 - INFO - Full dataset class distribution:
-2025-12-06 11:05:08,078 - Exp_ResNetClassifier_1850676979808 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:05:08,078 - Exp_ResNetClassifier_1850676979808 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:05:08,078 - Exp_ResNetClassifier_1850676979808 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:05:08,078 - Exp_ResNetClassifier_1850676979808 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:05:08,078 - Exp_ResNetClassifier_1850676979808 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:05:08,078 - Exp_ResNetClassifier_1850676979808 - INFO - ============================================================
-2025-12-06 11:05:08,078 - Exp_ResNetClassifier_1850676979808 - INFO - loading model
-2025-12-06 11:05:10,683 - Exp_ResNetClassifier_1850676979808 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:05:10,983 - Exp_ResNetClassifier_1850676979808 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:05:10,983 - Exp_ResNetClassifier_1850676979808 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:05:10,983 - Exp_ResNetClassifier_1850676979808 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:05:47,051 - __main__ - INFO - Args in experiment:
-2025-12-06 11:05:47,051 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:05:47,261 - Exp_ResNetClassifier_2624894249008 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:05:47,261 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:05:47,263 - Exp_ResNetClassifier_2624894249008 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:05:47,264 - Exp_ResNetClassifier_2624894249008 - INFO - ============================================================
-2025-12-06 11:05:47,264 - Exp_ResNetClassifier_2624894249008 - INFO - Full dataset class distribution:
-2025-12-06 11:05:47,264 - Exp_ResNetClassifier_2624894249008 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:05:47,264 - Exp_ResNetClassifier_2624894249008 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:05:47,267 - Exp_ResNetClassifier_2624894249008 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:05:47,267 - Exp_ResNetClassifier_2624894249008 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:05:47,267 - Exp_ResNetClassifier_2624894249008 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:05:47,267 - Exp_ResNetClassifier_2624894249008 - INFO - ============================================================
-2025-12-06 11:05:47,267 - Exp_ResNetClassifier_2624894249008 - INFO - loading model
-2025-12-06 11:05:49,494 - Exp_ResNetClassifier_2624894249008 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:05:49,790 - Exp_ResNetClassifier_2624894249008 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:05:49,790 - Exp_ResNetClassifier_2624894249008 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:05:49,790 - Exp_ResNetClassifier_2624894249008 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:06:05,764 - __main__ - INFO - Args in experiment:
-2025-12-06 11:06:05,764 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:06:05,974 - Exp_ResNetClassifier_1789687867440 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:06:05,974 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:06:05,976 - Exp_ResNetClassifier_1789687867440 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:06:05,978 - Exp_ResNetClassifier_1789687867440 - INFO - ============================================================
-2025-12-06 11:06:05,978 - Exp_ResNetClassifier_1789687867440 - INFO - Full dataset class distribution:
-2025-12-06 11:06:05,978 - Exp_ResNetClassifier_1789687867440 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:06:05,978 - Exp_ResNetClassifier_1789687867440 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:06:05,978 - Exp_ResNetClassifier_1789687867440 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:06:05,979 - Exp_ResNetClassifier_1789687867440 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:06:05,979 - Exp_ResNetClassifier_1789687867440 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:06:05,979 - Exp_ResNetClassifier_1789687867440 - INFO - ============================================================
-2025-12-06 11:06:05,979 - Exp_ResNetClassifier_1789687867440 - INFO - loading model
-2025-12-06 11:06:08,299 - Exp_ResNetClassifier_1789687867440 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:06:08,587 - Exp_ResNetClassifier_1789687867440 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:06:08,587 - Exp_ResNetClassifier_1789687867440 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:06:08,587 - Exp_ResNetClassifier_1789687867440 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:06:49,493 - __main__ - INFO - Args in experiment:
-2025-12-06 11:06:49,493 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:06:49,710 - Exp_ResNetClassifier_1782933661696 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:06:49,710 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:06:49,713 - Exp_ResNetClassifier_1782933661696 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:06:49,716 - Exp_ResNetClassifier_1782933661696 - INFO - ============================================================
-2025-12-06 11:06:49,716 - Exp_ResNetClassifier_1782933661696 - INFO - Full dataset class distribution:
-2025-12-06 11:06:49,716 - Exp_ResNetClassifier_1782933661696 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:06:49,716 - Exp_ResNetClassifier_1782933661696 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:06:49,716 - Exp_ResNetClassifier_1782933661696 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:06:49,716 - Exp_ResNetClassifier_1782933661696 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:06:49,717 - Exp_ResNetClassifier_1782933661696 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:06:49,717 - Exp_ResNetClassifier_1782933661696 - INFO - ============================================================
-2025-12-06 11:06:49,717 - Exp_ResNetClassifier_1782933661696 - INFO - loading model
-2025-12-06 11:06:51,903 - Exp_ResNetClassifier_1782933661696 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:06:52,196 - Exp_ResNetClassifier_1782933661696 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:06:52,196 - Exp_ResNetClassifier_1782933661696 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:06:52,196 - Exp_ResNetClassifier_1782933661696 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:07:21,752 - __main__ - INFO - Args in experiment:
-2025-12-06 11:07:21,752 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:07:21,952 - Exp_ResNetClassifier_2826988857344 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:07:21,958 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:07:21,958 - Exp_ResNetClassifier_2826988857344 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:07:21,958 - Exp_ResNetClassifier_2826988857344 - INFO - ============================================================
-2025-12-06 11:07:21,958 - Exp_ResNetClassifier_2826988857344 - INFO - Full dataset class distribution:
-2025-12-06 11:07:21,958 - Exp_ResNetClassifier_2826988857344 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:07:21,958 - Exp_ResNetClassifier_2826988857344 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:07:21,963 - Exp_ResNetClassifier_2826988857344 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:07:21,963 - Exp_ResNetClassifier_2826988857344 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:07:21,963 - Exp_ResNetClassifier_2826988857344 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:07:21,963 - Exp_ResNetClassifier_2826988857344 - INFO - ============================================================
-2025-12-06 11:07:21,963 - Exp_ResNetClassifier_2826988857344 - INFO - loading model
-2025-12-06 11:07:24,214 - Exp_ResNetClassifier_2826988857344 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:07:24,548 - Exp_ResNetClassifier_2826988857344 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:07:24,548 - Exp_ResNetClassifier_2826988857344 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:07:24,548 - Exp_ResNetClassifier_2826988857344 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:08:24,065 - __main__ - INFO - Args in experiment:
-2025-12-06 11:08:24,065 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:08:24,273 - Exp_ResNetClassifier_2675214690400 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:08:24,273 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:08:24,275 - Exp_ResNetClassifier_2675214690400 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:08:24,277 - Exp_ResNetClassifier_2675214690400 - INFO - ============================================================
-2025-12-06 11:08:24,278 - Exp_ResNetClassifier_2675214690400 - INFO - Full dataset class distribution:
-2025-12-06 11:08:24,278 - Exp_ResNetClassifier_2675214690400 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:08:24,278 - Exp_ResNetClassifier_2675214690400 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:08:24,278 - Exp_ResNetClassifier_2675214690400 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:08:24,278 - Exp_ResNetClassifier_2675214690400 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:08:24,278 - Exp_ResNetClassifier_2675214690400 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:08:24,278 - Exp_ResNetClassifier_2675214690400 - INFO - ============================================================
-2025-12-06 11:08:24,278 - Exp_ResNetClassifier_2675214690400 - INFO - loading model
-2025-12-06 11:08:26,572 - Exp_ResNetClassifier_2675214690400 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:08:26,861 - Exp_ResNetClassifier_2675214690400 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:08:26,861 - Exp_ResNetClassifier_2675214690400 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:08:26,862 - Exp_ResNetClassifier_2675214690400 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:12:27,553 - __main__ - INFO - Args in experiment:
-2025-12-06 11:12:27,553 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:12:27,757 - Exp_ResNetClassifier_2910203371216 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:12:27,757 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:12:27,759 - Exp_ResNetClassifier_2910203371216 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:12:27,762 - Exp_ResNetClassifier_2910203371216 - INFO - ============================================================
-2025-12-06 11:12:27,762 - Exp_ResNetClassifier_2910203371216 - INFO - Full dataset class distribution:
-2025-12-06 11:12:27,762 - Exp_ResNetClassifier_2910203371216 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:12:27,762 - Exp_ResNetClassifier_2910203371216 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:12:27,762 - Exp_ResNetClassifier_2910203371216 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:12:27,762 - Exp_ResNetClassifier_2910203371216 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:12:27,762 - Exp_ResNetClassifier_2910203371216 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:12:27,763 - Exp_ResNetClassifier_2910203371216 - INFO - ============================================================
-2025-12-06 11:12:27,763 - Exp_ResNetClassifier_2910203371216 - INFO - loading model
-2025-12-06 11:12:30,037 - Exp_ResNetClassifier_2910203371216 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:12:30,331 - Exp_ResNetClassifier_2910203371216 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:12:30,333 - Exp_ResNetClassifier_2910203371216 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:12:30,333 - Exp_ResNetClassifier_2910203371216 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:12:30,333 - Exp_ResNetClassifier_2910203371216 - INFO - Visualizing Grad-CAM Results...
-2025-12-06 11:12:59,602 - __main__ - INFO - Args in experiment:
-2025-12-06 11:12:59,602 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:12:59,806 - Exp_ResNetClassifier_2366190774464 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:12:59,806 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:12:59,811 - Exp_ResNetClassifier_2366190774464 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:12:59,811 - Exp_ResNetClassifier_2366190774464 - INFO - ============================================================
-2025-12-06 11:12:59,811 - Exp_ResNetClassifier_2366190774464 - INFO - Full dataset class distribution:
-2025-12-06 11:12:59,811 - Exp_ResNetClassifier_2366190774464 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:12:59,811 - Exp_ResNetClassifier_2366190774464 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:12:59,811 - Exp_ResNetClassifier_2366190774464 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:12:59,811 - Exp_ResNetClassifier_2366190774464 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:12:59,811 - Exp_ResNetClassifier_2366190774464 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:12:59,811 - Exp_ResNetClassifier_2366190774464 - INFO - ============================================================
-2025-12-06 11:12:59,811 - Exp_ResNetClassifier_2366190774464 - INFO - loading model
-2025-12-06 11:13:02,140 - Exp_ResNetClassifier_2366190774464 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:13:02,428 - Exp_ResNetClassifier_2366190774464 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:13:02,428 - Exp_ResNetClassifier_2366190774464 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:13:02,428 - Exp_ResNetClassifier_2366190774464 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:13:02,433 - Exp_ResNetClassifier_2366190774464 - INFO - Visualizing Grad-CAM Results...
-2025-12-06 11:13:04,587 - Exp_ResNetClassifier_2366190774464 - INFO - Grad-CAMVisualizationÒÑ±£´æ:./output/pic\gradcam_visualization.png
-2025-12-06 11:13:53,327 - __main__ - INFO - Args in experiment:
-2025-12-06 11:13:53,327 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:13:53,537 - Exp_ResNetClassifier_1868129722160 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:13:53,537 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:13:53,541 - Exp_ResNetClassifier_1868129722160 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:13:53,541 - Exp_ResNetClassifier_1868129722160 - INFO - ============================================================
-2025-12-06 11:13:53,541 - Exp_ResNetClassifier_1868129722160 - INFO - Full dataset class distribution:
-2025-12-06 11:13:53,541 - Exp_ResNetClassifier_1868129722160 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:13:53,541 - Exp_ResNetClassifier_1868129722160 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:13:53,541 - Exp_ResNetClassifier_1868129722160 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:13:53,541 - Exp_ResNetClassifier_1868129722160 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:13:53,541 - Exp_ResNetClassifier_1868129722160 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:13:53,541 - Exp_ResNetClassifier_1868129722160 - INFO - ============================================================
-2025-12-06 11:13:53,541 - Exp_ResNetClassifier_1868129722160 - INFO - loading model
-2025-12-06 11:13:55,810 - Exp_ResNetClassifier_1868129722160 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:13:56,090 - Exp_ResNetClassifier_1868129722160 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:13:56,090 - Exp_ResNetClassifier_1868129722160 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:13:56,093 - Exp_ResNetClassifier_1868129722160 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:13:56,093 - Exp_ResNetClassifier_1868129722160 - INFO - Visualizing Grad-CAM Results...
-2025-12-06 11:13:58,290 - Exp_ResNetClassifier_1868129722160 - INFO - Grad-CAMVisualizationÒÑ±£´æ:./output/pic\gradcam_visualization.png
-2025-12-06 11:18:09,544 - __main__ - INFO - Args in experiment:
-2025-12-06 11:18:09,544 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:18:09,753 - Exp_ResNetClassifier_2564761542400 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:18:09,753 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:18:09,754 - Exp_ResNetClassifier_2564761542400 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:18:09,758 - Exp_ResNetClassifier_2564761542400 - INFO - ============================================================
-2025-12-06 11:18:09,758 - Exp_ResNetClassifier_2564761542400 - INFO - Full dataset class distribution:
-2025-12-06 11:18:09,758 - Exp_ResNetClassifier_2564761542400 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:18:09,758 - Exp_ResNetClassifier_2564761542400 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:18:09,758 - Exp_ResNetClassifier_2564761542400 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:18:09,758 - Exp_ResNetClassifier_2564761542400 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:18:09,758 - Exp_ResNetClassifier_2564761542400 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:18:09,758 - Exp_ResNetClassifier_2564761542400 - INFO - ============================================================
-2025-12-06 11:18:09,758 - Exp_ResNetClassifier_2564761542400 - INFO - loading model
-2025-12-06 11:18:12,030 - Exp_ResNetClassifier_2564761542400 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:18:12,312 - Exp_ResNetClassifier_2564761542400 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:18:12,313 - Exp_ResNetClassifier_2564761542400 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:18:12,313 - Exp_ResNetClassifier_2564761542400 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:18:12,313 - Exp_ResNetClassifier_2564761542400 - INFO - Visualizing Grad-CAM Results...
-2025-12-06 11:18:14,486 - Exp_ResNetClassifier_2564761542400 - INFO - Grad-CAMVisualizationÒÑ±£´æ:./output/pic\gradcam_visualization.png
-2025-12-06 11:18:14,486 - Exp_ResNetClassifier_2564761542400 - INFO - Analyzing Grad-CAM Results...
-2025-12-06 11:18:15,620 - Exp_ResNetClassifier_2564761542400 - INFO - ×¢ÒâÁ¦AnalysisÒÑ±£´æ:./output/pic\gradcam_visualization.png
-2025-12-06 11:18:54,339 - __main__ - INFO - Args in experiment:
-2025-12-06 11:18:54,339 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:18:54,560 - Exp_ResNetClassifier_1420482750464 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:18:54,560 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:18:54,564 - Exp_ResNetClassifier_1420482750464 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:18:54,564 - Exp_ResNetClassifier_1420482750464 - INFO - ============================================================
-2025-12-06 11:18:54,564 - Exp_ResNetClassifier_1420482750464 - INFO - Full dataset class distribution:
-2025-12-06 11:18:54,564 - Exp_ResNetClassifier_1420482750464 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:18:54,564 - Exp_ResNetClassifier_1420482750464 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:18:54,564 - Exp_ResNetClassifier_1420482750464 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:18:54,564 - Exp_ResNetClassifier_1420482750464 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:18:54,564 - Exp_ResNetClassifier_1420482750464 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:18:54,564 - Exp_ResNetClassifier_1420482750464 - INFO - ============================================================
-2025-12-06 11:18:54,564 - Exp_ResNetClassifier_1420482750464 - INFO - loading model
-2025-12-06 11:18:56,768 - Exp_ResNetClassifier_1420482750464 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:18:57,090 - Exp_ResNetClassifier_1420482750464 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:18:57,090 - Exp_ResNetClassifier_1420482750464 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:18:57,090 - Exp_ResNetClassifier_1420482750464 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:18:57,090 - Exp_ResNetClassifier_1420482750464 - INFO - Visualizing Grad-CAM Results...
-2025-12-06 11:18:59,249 - Exp_ResNetClassifier_1420482750464 - INFO - Grad-CAMVisualizationÒÑ±£´æ:./output/pic\gradcam_visualization.png
-2025-12-06 11:18:59,249 - Exp_ResNetClassifier_1420482750464 - INFO - Analyzing Grad-CAM Results...
-2025-12-06 11:19:00,653 - Exp_ResNetClassifier_1420482750464 - INFO - ×¢ÒâÁ¦AnalysisÒÑ±£´æ:./output/pic\attention_pattern_analysis.png
-2025-12-06 11:22:34,792 - __main__ - INFO - Args in experiment:
-2025-12-06 11:22:34,792 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:22:35,005 - Exp_ResNetClassifier_3120474774096 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:22:35,005 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:22:35,008 - Exp_ResNetClassifier_3120474774096 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:22:35,010 - Exp_ResNetClassifier_3120474774096 - INFO - ============================================================
-2025-12-06 11:22:35,010 - Exp_ResNetClassifier_3120474774096 - INFO - Full dataset class distribution:
-2025-12-06 11:22:35,010 - Exp_ResNetClassifier_3120474774096 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:22:35,010 - Exp_ResNetClassifier_3120474774096 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:22:35,012 - Exp_ResNetClassifier_3120474774096 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:22:35,012 - Exp_ResNetClassifier_3120474774096 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:22:35,012 - Exp_ResNetClassifier_3120474774096 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:22:35,012 - Exp_ResNetClassifier_3120474774096 - INFO - ============================================================
-2025-12-06 11:22:35,012 - Exp_ResNetClassifier_3120474774096 - INFO - loading model
-2025-12-06 11:22:37,250 - Exp_ResNetClassifier_3120474774096 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:22:37,546 - Exp_ResNetClassifier_3120474774096 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:22:37,546 - Exp_ResNetClassifier_3120474774096 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:22:37,547 - Exp_ResNetClassifier_3120474774096 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:22:37,547 - Exp_ResNetClassifier_3120474774096 - INFO - Visualizing Grad-CAM Results...
-2025-12-06 11:22:39,740 - Exp_ResNetClassifier_3120474774096 - INFO - Grad-CAMVisualizationÒÑ±£´æ:./output/pic\gradcam_visualization.png
-2025-12-06 11:22:39,740 - Exp_ResNetClassifier_3120474774096 - INFO - Analyzing Grad-CAM Results...
-2025-12-06 11:22:40,863 - Exp_ResNetClassifier_3120474774096 - INFO - ×¢ÒâÁ¦AnalysisÒÑ±£´æ:./output/pic\attention_pattern_analysis.png
-2025-12-06 11:22:40,863 - Exp_ResNetClassifier_3120474774096 - INFO - Comparing Grad-CAM Results...
-2025-12-06 11:23:13,321 - __main__ - INFO - Args in experiment:
-2025-12-06 11:23:13,321 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:23:13,525 - Exp_ResNetClassifier_2676314138816 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:23:13,526 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:23:13,527 - Exp_ResNetClassifier_2676314138816 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:23:13,531 - Exp_ResNetClassifier_2676314138816 - INFO - ============================================================
-2025-12-06 11:23:13,531 - Exp_ResNetClassifier_2676314138816 - INFO - Full dataset class distribution:
-2025-12-06 11:23:13,531 - Exp_ResNetClassifier_2676314138816 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:23:13,531 - Exp_ResNetClassifier_2676314138816 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:23:13,531 - Exp_ResNetClassifier_2676314138816 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:23:13,531 - Exp_ResNetClassifier_2676314138816 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:23:13,531 - Exp_ResNetClassifier_2676314138816 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:23:13,531 - Exp_ResNetClassifier_2676314138816 - INFO - ============================================================
-2025-12-06 11:23:13,533 - Exp_ResNetClassifier_2676314138816 - INFO - loading model
-2025-12-06 11:23:15,787 - Exp_ResNetClassifier_2676314138816 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:23:16,071 - Exp_ResNetClassifier_2676314138816 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:23:16,073 - Exp_ResNetClassifier_2676314138816 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:23:16,073 - Exp_ResNetClassifier_2676314138816 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:23:16,073 - Exp_ResNetClassifier_2676314138816 - INFO - Visualizing Grad-CAM Results...
-2025-12-06 11:23:18,214 - Exp_ResNetClassifier_2676314138816 - INFO - Grad-CAMVisualizationÒÑ±£´æ:./output/pic\gradcam_visualization.png
-2025-12-06 11:23:18,215 - Exp_ResNetClassifier_2676314138816 - INFO - Analyzing Grad-CAM Results...
-2025-12-06 11:23:19,364 - Exp_ResNetClassifier_2676314138816 - INFO - ×¢ÒâÁ¦AnalysisÒÑ±£´æ:./output/pic\attention_pattern_analysis.png
-2025-12-06 11:23:19,369 - Exp_ResNetClassifier_2676314138816 - INFO - Comparing Grad-CAM Results...
-2025-12-06 11:23:21,064 - Exp_ResNetClassifier_2676314138816 - INFO - Comparing Grad-CAM Results:./output/pic\correct_vs_wrong.png
-2025-12-06 11:24:45,002 - __main__ - INFO - Args in experiment:
-2025-12-06 11:24:45,002 - __main__ - INFO - Namespace(is_training=0, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_test_epochs_10.log', logger=<Logger __main__ (INFO)>)
-2025-12-06 11:24:45,206 - Exp_ResNetClassifier_2057776714544 - INFO - Exp_ResNetClassifier init
-2025-12-06 11:24:45,206 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-2025-12-06 11:24:45,206 - Exp_ResNetClassifier_2057776714544 - INFO - Dataset loaded successfully! Total samples: 510
-2025-12-06 11:24:45,206 - Exp_ResNetClassifier_2057776714544 - INFO - ============================================================
-2025-12-06 11:24:45,206 - Exp_ResNetClassifier_2057776714544 - INFO - Full dataset class distribution:
-2025-12-06 11:24:45,206 - Exp_ResNetClassifier_2057776714544 - INFO -   Non-ICAS: 347 samples (68.0%)
-2025-12-06 11:24:45,206 - Exp_ResNetClassifier_2057776714544 - INFO -   ICAS: 163 samples (32.0%)
-2025-12-06 11:24:45,206 - Exp_ResNetClassifier_2057776714544 - INFO - Test set (77 samples, 15.1% of total):
-2025-12-06 11:24:45,206 - Exp_ResNetClassifier_2057776714544 - INFO -   Non-ICAS: 52 samples (67.5%)
-2025-12-06 11:24:45,206 - Exp_ResNetClassifier_2057776714544 - INFO -   ICAS: 25 samples (32.5%)
-2025-12-06 11:24:45,211 - Exp_ResNetClassifier_2057776714544 - INFO - ============================================================
-2025-12-06 11:24:45,211 - Exp_ResNetClassifier_2057776714544 - INFO - loading model
-2025-12-06 11:24:47,524 - Exp_ResNetClassifier_2057776714544 - INFO - »ìÏý¾ØÕóÍ¼ÒÑ³É¹¦±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
-2025-12-06 11:24:47,822 - Exp_ResNetClassifier_2057776714544 - INFO - ROCÇúÏßÒÑ±£´æÖÁ: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
-2025-12-06 11:24:47,822 - Exp_ResNetClassifier_2057776714544 - INFO - ROCÇúÏßAUCÖµ: 0.4654 (ÕýÀà: Non-ICAS)
-2025-12-06 11:24:47,822 - Exp_ResNetClassifier_2057776714544 - INFO - {'accuracy': 0.7012987012987013, 'precision': 0.75, 'recall': 0.12, 'f1': 0.20689655172413793, 'auc': 0.4653846153846154, 'confusion_matrix': array([[51,  1],
-       [22,  3]], dtype=int64)}
-2025-12-06 11:24:47,822 - Exp_ResNetClassifier_2057776714544 - INFO - Visualizing Grad-CAM Results...
-2025-12-06 11:24:49,991 - Exp_ResNetClassifier_2057776714544 - INFO - Grad-CAMVisualizationÒÑ±£´æ:./output/pic\gradcam_visualization.png
-2025-12-06 11:24:49,993 - Exp_ResNetClassifier_2057776714544 - INFO - Analyzing Grad-CAM Results...
-2025-12-06 11:24:51,120 - Exp_ResNetClassifier_2057776714544 - INFO - ×¢ÒâÁ¦AnalysisÒÑ±£´æ:./output/pic\attention_pattern_analysis.png
-2025-12-06 11:24:51,120 - Exp_ResNetClassifier_2057776714544 - INFO - Comparing Grad-CAM Results...
-2025-12-06 11:24:52,796 - Exp_ResNetClassifier_2057776714544 - INFO - Comparing Grad-CAM Results:./output/pic\correct_vs_wrong.png
+2025-12-06 12:22:02,081 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - Dataset loaded successfully! Total samples: 510
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - Full dataset class distribution:
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 163 samples (32.0%)
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - Test set (77 samples, 15.1% of total):
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 25 samples (32.5%)
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - loading model
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - æ··æ·†çŸ©é˜µå›¾å·²æˆåŠŸä¿å­˜è‡³: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - ROCæ›²çº¿å·²ä¿å­˜è‡³: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - ROCæ›²çº¿AUCå€¼: 0.4677 (æ­£ç±»: Non-ICAS)
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - {'accuracy': 0.6493506493506493, 'precision': 0.3333333333333333, 'recall': 0.08, 'f1': 0.12903225806451613, 'auc': 0.4676923076923077, 'confusion_matrix': array([[48,  4],
+       [23,  2]], dtype=int64)}
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - Dataset loaded successfully! Total samples: 510
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - Full dataset class distribution:
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 163 samples (32.0%)
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - Test set (77 samples, 15.1% of total):
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 25 samples (32.5%)
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - Visualizing Grad-CAM Results...
+2025-12-06 12:22:05 - Exp_ResNetClassifier_1649662005824 - INFO - Grad-CAMVisualizationå·²ä¿å­˜:./output/pic\gradcam_visualization.png
+2025-12-06 12:22:05 - Exp_ResNetClassifier_1649662005824 - INFO - Analyzing Grad-CAM Results...
+2025-12-06 12:22:06 - Exp_ResNetClassifier_1649662005824 - INFO - æ³¨æ„åŠ›Analysiså·²ä¿å­˜:./output/pic\attention_pattern_analysis.png
+2025-12-06 12:22:06 - Exp_ResNetClassifier_1649662005824 - INFO - Comparing Grad-CAM Results...
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - Comparing Grad-CAM Results:./output/pic\correct_vs_wrong.png
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - Dataset loaded successfully! Total samples: 510
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - Full dataset class distribution:
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 163 samples (32.0%)
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - Test set (77 samples, 15.1% of total):
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 25 samples (32.5%)
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - ä½¿ç”¨LIMEç”Ÿæˆè§£é‡Š...
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - æ­£åœ¨è§£é‡ŠSample 1/4...
+2025-12-06 12:22:32 - Exp_ResNetClassifier_1649662005824 - INFO - æ­£åœ¨è§£é‡ŠSample 2/4...
+2025-12-06 12:22:56 - Exp_ResNetClassifier_1649662005824 - INFO - æ­£åœ¨è§£é‡ŠSample 3/4...
+2025-12-06 12:23:19 - Exp_ResNetClassifier_1649662005824 - INFO - æ­£åœ¨è§£é‡ŠSample 4/4...
+2025-12-06 12:23:43 - Exp_ResNetClassifier_1649662005824 - INFO - VisualizationLIMEè§£é‡ŠResults...
+2025-12-06 12:23:44 - Exp_ResNetClassifier_1649662005824 - INFO - LIMEè§£é‡Šå·²ä¿å­˜:./output/pic\lime_explanations.png
+2025-12-06 12:23:44 - Exp_ResNetClassifier_1649662005824 - INFO - AnalysisFeature importance...
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - Feature importanceAnalysiså·²ä¿å­˜:./output/pic\feature_importance.png
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - AnalysisLIMEè§£é‡Šçš„Prediction consistency...
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - Sample 1: åŽŸå§‹Prediction=ICAS, LIMEé¢„æµ‹=ICAS,ä¸€è‡´æ€§=Yes
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - Sample 2: åŽŸå§‹Prediction=ICAS, LIMEé¢„æµ‹=ICAS,ä¸€è‡´æ€§=Yes
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - Sample 3: åŽŸå§‹Prediction=Non-ICAS, LIMEé¢„æµ‹=Non-ICAS,ä¸€è‡´æ€§=Yes
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - Sample 4: åŽŸå§‹Prediction=ICAS, LIMEé¢„æµ‹=ICAS,ä¸€è‡´æ€§=Yes
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO -
+  Prediction consistency: 4/4 (100.00%)
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO -   Prediction consistency: 100.00%
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO -   LIMEé€šè¿‡æ‰°åŠ¨è¾“å…¥Imageçš„è¶…åƒç´ åŒºåŸŸæ¥è§£é‡ŠModelå†³ç­–
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO -   ç»¿è‰²åŒºåŸŸæ”¯æŒé¢„æµ‹ï¼Œçº¢è‰²åŒºåŸŸåå¯¹Prediction

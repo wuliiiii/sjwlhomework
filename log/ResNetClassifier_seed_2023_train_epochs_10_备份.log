@@ -1,0 +1,104 @@
+2025-12-06 12:21:30,057 - __main__ - INFO - Args in experiment:
+2025-12-06 12:21:30,057 - __main__ - INFO - Namespace(is_training=1, model='ResNetClassifier', data_path='./dataset/thermal_classification_cropped/', checkpoints='./checkpoints/', num_class=2, num_workers=10, itr=1, train_epochs=10, batch_size=16, patience=15, learning_rate=0.001, des='test', loss='MSE', drop_last=True, lradj='TST', use_amp=False, pct_start=0.2, use_gpu=True, gpu=0, devices='0,1', use_multi_gpu=False, fix_seed=2023, device_ids=[0, 1], seed=2023, log_path='./log/ResNetClassifier_seed_2023_train_epochs_10.log', logger=<Logger __main__ (INFO)>)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - Exp_ResNetClassifier init
+2025-12-06 12:21:30,291 - __main__ - INFO - >>>>>>>start training : ResNetClassifier_2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - Dataset loaded successfully! Total samples: 510
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - Full dataset class distribution:
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 163 samples (32.0%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - Train set (357 samples, 70.0% of total):
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 243 samples (68.1%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 114 samples (31.9%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - Dataset loaded successfully! Total samples: 510
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - Full dataset class distribution:
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 163 samples (32.0%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - Val set (76 samples, 14.9% of total):
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 52 samples (68.4%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 24 samples (31.6%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - Dataset loaded successfully! Total samples: 510
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - Full dataset class distribution:
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 163 samples (32.0%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - Test set (77 samples, 15.1% of total):
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 25 samples (32.5%)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - 训练初始化完成 | 正则化配置：标签平滑(0.1)、权重衰减(1e-4)、梯度裁剪(1.0)、早停(patience=10)
+2025-12-06 12:21:30 - Exp_ResNetClassifier_1649662005824 - INFO - 训练轮数：10 | 设备：cuda:0
+2025-12-06 12:21:34 - Exp_ResNetClassifier_1649662005824 - INFO - Epoch [1/10] | Train Loss: 0.5756, Train Acc: 66.67% | Val Loss: 0.6446, Val Acc: 65.79% | Patience Counter: 0/10 | Current LR: 0.001000
+2025-12-06 12:21:37 - Exp_ResNetClassifier_1649662005824 - INFO - Epoch [2/10] | Train Loss: 0.5544, Train Acc: 68.35% | Val Loss: 0.8228, Val Acc: 68.42% | Patience Counter: 1/10 | Current LR: 0.001000
+2025-12-06 12:21:40 - Exp_ResNetClassifier_1649662005824 - INFO - Epoch [3/10] | Train Loss: 0.5238, Train Acc: 69.75% | Val Loss: 0.7805, Val Acc: 68.42% | Patience Counter: 2/10 | Current LR: 0.001000
+2025-12-06 12:21:43 - Exp_ResNetClassifier_1649662005824 - INFO - Epoch [4/10] | Train Loss: 0.5147, Train Acc: 70.31% | Val Loss: 1.0660, Val Acc: 65.79% | Patience Counter: 3/10 | Current LR: 0.001000
+2025-12-06 12:21:46 - Exp_ResNetClassifier_1649662005824 - INFO - Epoch [5/10] | Train Loss: 0.4723, Train Acc: 73.95% | Val Loss: 0.8738, Val Acc: 67.11% | Patience Counter: 4/10 | Current LR: 0.001000
+2025-12-06 12:21:49 - Exp_ResNetClassifier_1649662005824 - INFO - Epoch [6/10] | Train Loss: 0.3941, Train Acc: 82.35% | Val Loss: 1.0817, Val Acc: 51.32% | Patience Counter: 5/10 | Current LR: 0.001000
+2025-12-06 12:21:52 - Exp_ResNetClassifier_1649662005824 - INFO - Epoch [7/10] | Train Loss: 0.4090, Train Acc: 82.35% | Val Loss: 0.9091, Val Acc: 64.47% | Patience Counter: 6/10 | Current LR: 0.001000
+2025-12-06 12:21:55 - Exp_ResNetClassifier_1649662005824 - INFO - Epoch [8/10] | Train Loss: 0.3834, Train Acc: 85.43% | Val Loss: 1.2295, Val Acc: 56.58% | Patience Counter: 7/10 | Current LR: 0.001000
+2025-12-06 12:21:58 - Exp_ResNetClassifier_1649662005824 - INFO - Epoch [9/10] | Train Loss: 0.3304, Train Acc: 86.83% | Val Loss: 1.1026, Val Acc: 57.89% | Patience Counter: 8/10 | Current LR: 0.001000
+2025-12-06 12:22:01 - Exp_ResNetClassifier_1649662005824 - INFO - Epoch [10/10] | Train Loss: 0.3881, Train Acc: 88.80% | Val Loss: 1.3748, Val Acc: 67.11% | Patience Counter: 9/10 | Current LR: 0.001000
+2025-12-06 12:22:01 - Exp_ResNetClassifier_1649662005824 - INFO - 训练完成 | 最终最佳验证准确率：67.11%
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - 训练图已成功保存至: D:\code\pycharm_project\sjwlhomework\output\pic\history
+2025-12-06 12:22:02,081 - __main__ - INFO - >>>>>>>testing : ResNetClassifier_2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - Dataset loaded successfully! Total samples: 510
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - Full dataset class distribution:
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 163 samples (32.0%)
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - Test set (77 samples, 15.1% of total):
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 25 samples (32.5%)
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - loading model
+2025-12-06 12:22:02 - Exp_ResNetClassifier_1649662005824 - INFO - 混淆矩阵图已成功保存至: D:\code\pycharm_project\sjwlhomework\output\pic\confusion_matrix
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - ROC曲线已保存至: D:\code\pycharm_project\sjwlhomework\output\pic\roc_curve.png
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - ROC曲线AUC值: 0.4677 (正类: Non-ICAS)
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - {'accuracy': 0.6493506493506493, 'precision': 0.3333333333333333, 'recall': 0.08, 'f1': 0.12903225806451613, 'auc': 0.4676923076923077, 'confusion_matrix': array([[48,  4],
+       [23,  2]], dtype=int64)}
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - Dataset loaded successfully! Total samples: 510
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - Full dataset class distribution:
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 163 samples (32.0%)
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - Test set (77 samples, 15.1% of total):
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 25 samples (32.5%)
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:03 - Exp_ResNetClassifier_1649662005824 - INFO - Visualizing Grad-CAM Results...
+2025-12-06 12:22:05 - Exp_ResNetClassifier_1649662005824 - INFO - Grad-CAMVisualization已保存:./output/pic\gradcam_visualization.png
+2025-12-06 12:22:05 - Exp_ResNetClassifier_1649662005824 - INFO - Analyzing Grad-CAM Results...
+2025-12-06 12:22:06 - Exp_ResNetClassifier_1649662005824 - INFO - 注意力Analysis已保存:./output/pic\attention_pattern_analysis.png
+2025-12-06 12:22:06 - Exp_ResNetClassifier_1649662005824 - INFO - Comparing Grad-CAM Results...
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - Comparing Grad-CAM Results:./output/pic\correct_vs_wrong.png
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - Dataset loaded successfully! Total samples: 510
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - Full dataset class distribution:
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 347 samples (68.0%)
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 163 samples (32.0%)
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - Test set (77 samples, 15.1% of total):
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO -   Non-ICAS: 52 samples (67.5%)
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO -   ICAS: 25 samples (32.5%)
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - ============================================================
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - 使用LIME生成解释...
+2025-12-06 12:22:08 - Exp_ResNetClassifier_1649662005824 - INFO - 正在解释Sample 1/4...
+2025-12-06 12:22:32 - Exp_ResNetClassifier_1649662005824 - INFO - 正在解释Sample 2/4...
+2025-12-06 12:22:56 - Exp_ResNetClassifier_1649662005824 - INFO - 正在解释Sample 3/4...
+2025-12-06 12:23:19 - Exp_ResNetClassifier_1649662005824 - INFO - 正在解释Sample 4/4...
+2025-12-06 12:23:43 - Exp_ResNetClassifier_1649662005824 - INFO - VisualizationLIME解释Results...
+2025-12-06 12:23:44 - Exp_ResNetClassifier_1649662005824 - INFO - LIME解释已保存:./output/pic\lime_explanations.png
+2025-12-06 12:23:44 - Exp_ResNetClassifier_1649662005824 - INFO - AnalysisFeature importance...
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - Feature importanceAnalysis已保存:./output/pic\feature_importance.png
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - AnalysisLIME解释的Prediction consistency...
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - Sample 1: 原始Prediction=ICAS, LIME预测=ICAS,一致性=Yes
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - Sample 2: 原始Prediction=ICAS, LIME预测=ICAS,一致性=Yes
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - Sample 3: 原始Prediction=Non-ICAS, LIME预测=Non-ICAS,一致性=Yes
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - Sample 4: 原始Prediction=ICAS, LIME预测=ICAS,一致性=Yes
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO - 
+  Prediction consistency: 4/4 (100.00%)
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO -   Prediction consistency: 100.00%
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO -   LIME通过扰动输入Image的超像素区域来解释Model决策
+2025-12-06 12:23:45 - Exp_ResNetClassifier_1649662005824 - INFO -   绿色区域支持预测，红色区域反对Prediction

@@ -55,16 +55,24 @@ def data_provider(args, flag,logger,use_lime=False):
         logger.info(f"Error: Dataset path {data_path} does not exist!")
         return False
 
-        # 定义图像变换（与原代码一致）
+    # 定义图像变换（与原代码一致）
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
-        transforms.ToTensor()
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                             std=[0.229, 0.224, 0.225])
     ])
+
+    if use_lime:
+        # 用于模型预测的变换（包含归一化）
+        transform = transforms.Compose([
+            transforms.Resize((224, 224)),
+            transforms.ToTensor()
+        ])
 
     # 获取数据变换：训练集用增强，研究/测试集用预处理
     # train_transform, val_transform = get_data_transforms_solution()
     # transform = train_transform if flag == 'train' else val_transform
-
 
 
     # 加载完整数据集
@@ -134,9 +142,11 @@ def data_provider(args, flag,logger,use_lime=False):
 
     # 创建数据加载器（训练集shuffle=True，研究/测试集shuffle=False）
     shuffle = True if flag == 'train' else False
+    batch_size = 4 if flag == 'train' else 1
+
     data_loader = DataLoader(
         subset_dataset,
-        batch_size=1,
+        batch_size=batch_size,
         shuffle=shuffle,
     )
 

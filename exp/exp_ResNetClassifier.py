@@ -5,7 +5,7 @@ from data_provider.data_factory import data_provider
 from util.tools import EarlyStopping, adjust_learning_rate
 from util.instructor_solution_guide import get_data_transforms_solution
 from util.gradcam_pytorch import visualize_gradcam,analyze_attention_patterns,compare_correct_vs_wrong_predictions
-from util.lime_pytorch import explain_with_lime
+from util.lime_pytorch import explain_with_lime,visualize_lime_explanations,analyze_feature_importance,compare_lime_predictions
 from torch import optim
 import torch
 import os
@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix,roc_curve, auc
 import seaborn as sns
 from torchvision import transforms, datasets, models
+import sys
 
 # Sample Visualization Functions
 def plot_training_history_solution(history,logger=None):
@@ -123,7 +124,7 @@ class Exp_ResNetClassifier(Exp_Basic):
         return model
 
     def _setup_logger(self):
-        """设置日志器，配置日志格式和级别"""
+        """设置日志器，配置日志格式和级别（修复中文乱码）"""
         logger_name = f"{self.__class__.__name__}_{id(self)}"
         logger = logging.getLogger(logger_name)
 
@@ -131,27 +132,46 @@ class Exp_ResNetClassifier(Exp_Basic):
         if not logger.handlers:
             logger.setLevel(logging.DEBUG)  # 日志级别：DEBUG < INFO < WARNING < ERROR < CRITICAL
 
-            # 控制台处理器
-            console_handler = logging.StreamHandler()
-            console_handler.setLevel(logging.INFO)  # 控制台输出INFO及以上级别
-
-            # 文件处理器（可选）
-            if hasattr(self.args, 'log_path'):
-                file_handler = logging.FileHandler(self.args.log_path)
-                file_handler.setLevel(logging.DEBUG)  # 文件记录DEBUG及以上级别
-
-            # 日志格式
+            # 定义统一的日志格式
             formatter = logging.Formatter(
-                '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+                '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                datefmt='%Y-%m-%d %H:%M:%S'  # 补充时间格式，可选
             )
-            console_handler.setFormatter(formatter)
-            file_handler.setFormatter(formatter)
 
+            # ========== 修复控制台中文乱码 ==========
+            console_handler = logging.StreamHandler(sys.stdout)  # 指定stdout，避免stderr编码问题
+            console_handler.setLevel(logging.INFO)  # 控制台输出INFO及以上级别
+            # 强制设置控制台编码为UTF-8（Windows关键）
+            if hasattr(console_handler.stream, 'reconfigure'):
+                console_handler.stream.reconfigure(encoding='utf-8')
+            else:
+                # 兼容Python 3.7以下版本
+                import io
+                console_handler.stream = io.TextIOWrapper(
+                    console_handler.stream.buffer, encoding='utf-8'
+                )
+            console_handler.setFormatter(formatter)
             logger.addHandler(console_handler)
-            logger.addHandler(file_handler)
+
+            # ========== 修复日志文件中文乱码 ==========
+            file_handler = None  # 初始化，避免未定义报错
+            if hasattr(self.args, 'log_path') and self.args.log_path:  # 增加非空判断
+                # 核心：指定encoding='utf-8'，mode='a'追加模式（默认也是a，显式指定更清晰）
+                file_handler = logging.FileHandler(
+                    self.args.log_path,
+                    mode='a',
+                    encoding='utf-8'
+                )
+                file_handler.setLevel(logging.DEBUG)  # 文件记录DEBUG及以上级别
+                file_handler.setFormatter(formatter)
+                logger.addHandler(file_handler)
 
             # 防止日志传播到根日志器
             logger.propagate = False
+
+            # 可选：Windows CMD下切换编码（如果需要）
+            if os.name == 'nt':  # 判断是否为Windows系统
+                os.system('chcp 65001 > nul')  # 静默切换CMD编码为UTF-8
 
         return logger
 
@@ -321,25 +341,34 @@ class Exp_ResNetClassifier(Exp_Basic):
         metrics = self.evaluate_model_solution(self.model,test_loader,self.device)
         self.logger.info(metrics)
 
+        # gradcam
+        self._gradcam()
+
+        # line
+        self._lime()
+
+
+    def _gradcam(self):
+        test_data, test_loader = self._get_data(flag='test')
+        class_names = ["ICAS", "Non-ICAS"]
+
         # Step2: 生成Grad-CAM可视化
-        visualize_gradcam(self.model.model.backbone, test_loader, class_names,device=self.device,logger=self.logger)
+        visualize_gradcam(self.model.model.backbone, test_loader, class_names, device=self.device, logger=self.logger)
 
         # step3:分析注意力机制
-        analyze_attention_patterns(self.model.model.backbone, test_loader, class_names,device=self.device,logger=self.logger)
+        analyze_attention_patterns(self.model.model.backbone, test_loader, class_names, device=self.device,
+                                   logger=self.logger)
 
         # Step4: 比较正确和错误预测
-        compare_correct_vs_wrong_predictions(self.model.model.backbone, test_loader, class_names,device=self.device,logger=self.logger)
+        compare_correct_vs_wrong_predictions(self.model.model.backbone, test_loader, class_names, device=self.device,
+                                             logger=self.logger)
 
-        lime_test_data, lime_test_loader = self._get_data(flag='test',use_lime=True)
 
+    def _lime(self):
+        lime_test_data, lime_test_loader = self._get_data(flag='test', use_lime=True)
+        class_names = ["ICAS", "Non-ICAS"]
         # 使用Lime
         # 用于LIME的变换（不包含归一化）
-        lime_transform = transforms.Compose([
-            transforms.Resize((224, 224)),
-            transforms.ToTensor()
-        ])
-
-        # 用于模型预测的变换（包含归一化）
         model_transform = transforms.Compose([
             transforms.Resize((224, 224)),
             transforms.ToTensor(),
@@ -347,9 +376,28 @@ class Exp_ResNetClassifier(Exp_Basic):
                                  std=[0.229, 0.224, 0.225])
         ])
 
-        # Step2: 使用LIME生成解释
-        samples, explanations = explain_with_lime(self.model.model.backbone, lime_test_loader, class_names, model_transform,logger=self.logger)
+        # 用于模型预测的变换（包含归一化）
+        line_transform = transforms.Compose([
+            transforms.Resize((224, 224)),
+            transforms.ToTensor()
+        ])
 
+        # Step2: 使用LIME生成解释
+        samples, explanations = explain_with_lime(self.model.model.backbone, lime_test_loader, class_names,
+                                                  model_transform,num_samples=4, logger=self.logger)
+
+        # Step3: 可视化LIME解释
+        visualize_lime_explanations(samples, explanations, class_names, logger=self.logger)
+
+        # Step4: 分析特征重要性
+        analyze_feature_importance(samples, explanations, class_names, logger=self.logger)
+
+        # Step5: 比较预测一致性
+        consistency_rate = compare_lime_predictions(samples, explanations, class_names, logger=self.logger)
+
+        self.logger.info(f"  Prediction consistency: {consistency_rate:.2%}")
+        self.logger.info(f"  LIME通过扰动输入Image的超像素区域来解释Model决策")
+        self.logger.info(f"  绿色区域支持预测，红色区域反对Prediction")
 
 
     # Sample Evaluation Function Implementation
