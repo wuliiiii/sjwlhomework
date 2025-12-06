@@ -50,6 +50,7 @@ seaborn>=0.11.0
 tqdm>=4.62.0
 pillow>=8.3.0
 logging>=0.5.1.2
+lime>=0.2.0.1
 ```
 ## 数据集说明
 
@@ -138,18 +139,28 @@ python main.py --use_gpu --is_training 0
 
 ### 4. 可视化结果说明
 
+- - **注意力分析（attention_pattern_analysis.png）**：根据GradCam直观分析注意力机制
+
 - - **混淆矩阵（confusion_matrix.png）**：直观展示真阳性、真阴性、假阳性、假阴性数量，评估类别级分类效果
+
+- - **对错比较（correct_vs_wrong.png）**：根据GradCam比较正确和错误预测
+
+- - **特征重要程度（feature_importance.png）**：根据lime分析不同特征的重要性
+
+- - **GradCam可视化（gradcam_visualization.png）**：随机展示测试集样本的GradCam可视化
+
+- - **训练曲线（history.png）**：包含训练/验证损失曲线和准确率曲线，用于判断过拟合/欠拟合
+
+- - **lime分析（lime_explanations.png）**：使用lime分析模型分类的效果进行解释
 
 - - **ROC曲线（roc_curve.png）**：展示模型在不同阈值下的区分能力，AUC值越接近1性能越好
 
-- - **训练曲线（train_curve.png）**：包含训练/验证损失曲线和准确率曲线，用于判断过拟合/欠拟合
-
 - - **样本预测结果（sample_predictions.png）**：随机展示测试集样本的预测结果（真实标签vs预测标签）
+
 
 ## 补充说明
 
 
+1. 模型过拟合时，可增加数据增强强度、调大Dropout比例或延长早停容忍轮数；
 
-2. 模型过拟合时，可增加数据增强强度、调大Dropout比例或延长早停容忍轮数；
-
-3. 所有可视化结果默认保存至 output/pic 目录，可通过配置文件修改保存路径。
+2. 所有可视化结果默认保存至 output/pic 目录，可通过配置文件修改保存路径。
